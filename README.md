@@ -1,1 +1,1 @@
-Exercicios desenvolvidos na disciplina de logica, computação e algoritmos no curso de engenharia de software
+Exercicios propostos pela materia de Lógica, Computação e Algoritmos, da falculdade de Engenharia de software no Instituto infnet
