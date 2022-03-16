@@ -9,6 +9,7 @@ var
    salario:         real
    aliquota:        real
    parcela:         real
+   salarioLiquido:  real
 inicio
 
        escreva ("informe o nome do funcionario: ")
@@ -41,10 +42,17 @@ inicio
        fimse
 
             parcela <- salario * aliquota
+            
+            salarioLiquido <- salario - parcela
+            
+       se parcela = 0 entao
+       escreval ("o funcionario ",funcionario, " da empresa ",empresa, " está isento de qualquer dedução.")
+       senao escreva
+       escreval ("o funcionario ",funcionario, " da empresa ",empresa, " terá o valor de R$ ",parcela, " a deduzir do salário. ")
+       escreva (" seu salario liquido é: ",salarioLiquido )
+       fimse
 
-       escreva ("o funcionario ",funcionario, " da empresa ",empresa, " terá o valor de R$ ",parcela, " a deduzir do salário.")
 
-       escreva ("o funcionario ",funcionario, " da empresa ",empresa, " está isento de qualquer dedução.")
        
        //Até 1.903,98 = 0;
        //De 1.903,99 até 2.826,65 = 7,50%;
