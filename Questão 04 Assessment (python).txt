@@ -1,0 +1,27 @@
+def calculoMontante(valor, rendimento, aporte):
+
+    return (valor * rendimento) + valor + aporte
+
+def proximoMontante(montante, rendimento, aporte):
+
+    return (montante * rendimento) + montante + aporte
+
+
+valorInicial=float(input("Informe o valor inicial de investimento: R$ "))
+
+rendimentoPeriodo=float(input("Informe o rendimento por período(%): "))
+
+aportePeriodo=float(input("Informe o aporte efetivado a cada período: R$ "))
+
+totalPeriodos=int(input("Total de períodos: "))
+
+
+rendimentoPeriodo = rendimentoPeriodo / 100
+
+montante = calculoMontante(valorInicial, rendimentoPeriodo, aportePeriodo)
+
+for periodo in range(totalPeriodos):
+
+    print(f"Após {periodo + 1} período(s), o montante será de: R${montante}")
+
+    montante = proximoMontante(montante, rendimentoPeriodo, aportePeriodo)
